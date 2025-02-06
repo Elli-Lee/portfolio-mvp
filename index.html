@@ -20,23 +20,35 @@
   </head>
   <body>
     <!-- Header -->
-    <header>
-      <nav>
+    <header class="header">
+      <nav class="nav container">
         <!-- 이미지(로고) -->
-        <div>
-          <img src="./images/favicon2.ico" alt="로고" />
-          <a href="#">LEE YOO JIN</a>
+        <div class="nav__logo">
+          <img class="nav__img" src="./images/whale_logo_2.png" alt="로고" />
+          <a class="nav__brand" href="#">LEE YOO JIN</a>
         </div>
 
         <!-- 메뉴 -->
-        <div>
-          <ul>
-            <li><a href="#home"></a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#work">Work</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
+        <div class="nav__menu" id="nav__menu">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a class="nav__link active-link" href="#home">Home</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#about">About</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#skills">Skills</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#work">Work</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#projects">Projects</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#contact">Contact</a>
+            </li>
           </ul>
         </div>
       </nav>
@@ -44,23 +56,23 @@
     <!-- Main -->
     <main>
       <!-- Home -->
-      <section id="home">
+      <section class="home container section" id="home">
         <!-- Home Data -->
-        <div>
-          <h2>
+        <div class="home__data">
+          <h2 class="home__title">
             안녕하세요! <br />
-            <strong>프론트엔드 개발자</strong> <br />
-            <strong>이유진</strong>입니다.
+            <strong class="home__title-color">프론트엔드 개발자</strong> <br />
+            <strong class="home__title-color">이유진</strong>입니다.
           </h2>
-          <a href="contact">Contact</a>
+          <a class="button" href="contact">Contact</a>
 
-          <div>
+          <div class="home__social">
             <a
               href="https://github.com/Elli-Lee"
               target="_blank"
               title="이유진 깃허브 링크"
             >
-              <i class="fa-brands fa-github"></i>
+              <i class="fa-brands fa-github home__social-icon"></i>
             </a>
             <!-- <a href="#" target="_blank" title="이유진 노션 링크">
               <img src="./images/home/notion.png" alt="노션 아이콘" />
@@ -70,26 +82,32 @@
               target="_blank"
               title="이유진 인스타그램 링크"
             >
-              <i class="fa-brands fa-instagram"></i>
+              <i class="fa-brands fa-instagram home__social-icon"></i>
             </a>
             <!-- Todo: 노션, 블로그 추가 -->
           </div>
         </div>
 
         <!-- Home Image -->
-        <img src="./images/home/elli-lee.png" alt="프로필이미지" />
+        <img
+          class="home__img"
+          src="./images/home/elli-lee.png"
+          alt="프로필이미지"
+        />
       </section>
 
       <!-- About -->
-      <section id="about">
-        <h2>About</h2>
-        <div>
-          <div>
-            <img src="./images/about/whale.jpeg" alt="프로필이미지" />
-          </div>
-          <div>
-            <h3>저는 이렇게 답합니다.</h3>
-            <p>
+      <section class="about section bg-grey-1" id="about">
+        <h2 class="section__title">About</h2>
+        <div class="about__container container">
+          <img
+            class="about__img"
+            src="./images/about/whale.jpeg"
+            alt="프로필이미지"
+          />
+          <div class="about__data">
+            <h3 class="about__subtitle">저는 이렇게 답합니다.</h3>
+            <p class="about__text">
               이것은 예시입니다 어떤 내용으로 채울지는 다음에 생각하고 일단은
               대충 구조만 잡아보려고 합니다. 헤헤 저는 고래를 좋아합니다. 고래는
               스스로 강하기 때문에 두려울 것이 없고, 그 강함으로 다른 동물들을
@@ -114,8 +132,8 @@
       <!-- Todo: EDUCATION & CERTIFICATES 추가-->
 
       <!-- Skills -->
-      <section id="skills">
-        <h2>Skills</h2>
+      <section class="section" id="skills">
+        <h2 class="section__title">Skills</h2>
         <div>
           <!-- 스킬 데이터 -->
           <div>
@@ -193,8 +211,8 @@
       </section>
 
       <!-- Work -->
-      <section id="work">
-        <h2>Work</h2>
+      <section class="section" id="work">
+        <h2 class="section__title">Work</h2>
         <div>
           <a href="#" target="_blank" title="첫번째 프로젝트">
             <img
@@ -230,11 +248,11 @@
       </section>
 
       <!-- Projects -->
-      <section id="projects"></section>
+      <!-- <section id="projects"></section> -->
 
       <!-- Contact -->
-      <section id="contact">
-        <h2>Contact</h2>
+      <section class="section" id="contact">
+        <h2 class="section__title">Contact</h2>
         <div>
           <form>
             <input type="text" name="name" placeholder="이름" required />
