@@ -1,12 +1,22 @@
-let greeting = 'Hello, world!';
+function toggleMenu() {
+  const $navMenu = document.getElementById('nav__menu');
+  $navMenu.classList.toggle('show');
+}
 
-console.log(greetting);
+function init() {
+  const $navToggle = document.getElementById('nav__toggle');
+  console.log($navToggle);
+  $navToggle.addEventListener('click', () => {
+    // menu toggle
+    toggleMenu();
+  });
 
+  const $navLinkList = document.querySelectorAll('.nav__list');
+  $navLinkList.forEach((item) => {
+    item.addEventListener('click', () => {
+      toggleMenu();
+    });
+  });
+}
 
-let nickname = '짐코딩';
-let hobby = ['헬스', '수영'];
-
-let person = {
-  nickname: nickname,
-  hobby: hobby,
-};
+init();

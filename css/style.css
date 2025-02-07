@@ -74,7 +74,7 @@ body {
 .container {
   max-width: 1024px;
   margin: 0 auto;
-  padding: o var(--spacing-1);
+  padding: 0 var(--spacing-1);
 }
 
 /* Header */
@@ -139,7 +139,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: var(--spacing-5) 0;
+  padding-top: var(--spacing-5);
+  padding-bottom: var(--spacing-5);
 }
 
 .home__title {
@@ -188,7 +189,8 @@ body {
 
 /* Section */
 .section {
-  padding: calc(var(--header-height) + 1rem) 0;
+  padding-top: calc(var(--header-height) + 1rem);
+  padding-bottom: calc(var(--header-height) + 1rem);
 }
 
 .section__title {
@@ -410,4 +412,90 @@ body {
 
 .floating-button-icon {
   font-size: 1.2rem;
+}
+
+/* Nav Toggle */
+
+.nav__toggle {
+  display: none;
+}
+
+.show {
+  right: 0 !important;
+}
+
+/* Responsive */
+/* Mobile */
+@media only screen and (max-width: 768px) {
+  :root {
+    --font-size-1: 2rem;
+    --font-size-2: 1.75rem;
+    --font-size-3: 1.5rem;
+    --font-size-4: 1.25rem;
+    --font-size-5: 0.938rem;
+    --font-size-6: 0.75rem;
+
+    --header-height: 3rem;
+  }
+  .nav__toggle {
+    display: block;
+    cursor: pointer;
+    padding: 0.5rem;
+  }
+  .nav__menu {
+    position: fixed;
+    height: 100%;
+    width: 80%;
+    top: var(--header-height);
+    right: -100%;
+    padding: 2rem;
+    transition: 0.2s;
+    background-color: var(--dark-color);
+  }
+
+  .nav__list {
+    display: block; /* 세로 정렬 */
+  }
+
+  .nav__item {
+    margin-left: 0;
+    margin-bottom: var(--spacing-4);
+  }
+
+  /* Home */
+  .home {
+    flex-direction: column-reverse; /* 세로 정렬 */
+    text-align: center;
+  }
+
+  .home__social {
+    justify-content: center;
+  }
+
+  .home__title {
+    margin-top: var(--spacing-3);
+  }
+
+  /* About */
+  .about__container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about__subtitle {
+    margin-top: var(--spacing-2);
+  }
+
+  /* Skills */
+  .skills__container {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    text-align: center;
+  }
+
+  /* Work */
+  .work__container {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
 }
