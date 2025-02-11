@@ -85,19 +85,3 @@ typeit
   .delete(4, { delay: 300 })
   .type('<strong class="home__title-color">이유진</strong>입니다.')
   .go();
-
-function testScope() {
-  var a = 10;
-  let b = 20;
-
-  if (true) {
-    var a = 30;
-    let b = 40;
-    console.log(b); // (1) 40
-  }
-
-  console.log(a); // (2) 30
-  console.log(b); // (3) 20
-}
-
-testScope();
