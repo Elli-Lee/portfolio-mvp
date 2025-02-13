@@ -85,3 +85,20 @@ typeit
   .delete(4, { delay: 300 })
   .type('<strong class="home__title-color">이유진</strong>입니다.')
   .go();
+
+// 이메일 클라이언트 열기
+const $contactForm = document.getElementById('contactForm');
+$contactForm.addEventListener('submit', (e) => {
+  e.preventDefault();
+  const name = $contactForm.name.value;
+  const subject = $contactForm.subject.value;
+  const message = $contactForm.message.value;
+  const to = 'elli.stdev@gmail.com';
+
+  // 이메일 클라이언트 열기
+  location.href = `mailto:${encodeURIComponent(
+    to,
+  )}?subject=[${encodeURIComponent(name)}님 문의] ${encodeURIComponent(
+    subject,
+  )}&body=${encodeURIComponent(message)}`;
+});
